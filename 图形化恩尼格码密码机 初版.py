@@ -2,7 +2,7 @@
 
 import re
 import string
-import easygui as ezgui
+import easygui as eg
 
 def simple_replace(password, replace_word1, replace_word2, replace_word3):  
     count = 0  
@@ -66,11 +66,11 @@ def reverse_word(word):
  
 while True:
     title = 'by 石光k一5'
-    ezgui.msgbox('这是恩尼格码密码机',title)
-    a_password = ezgui.enterbox('请输入明文加密或密文解密:',title)
+    eg.msgbox('这是恩尼格码密码机',title)
+    a_password = eg.enterbox('请输入明文加密或密文解密:',title)
     r_password1 = 'qwertyuiopasdfghjklzxcvbnm'  # 转子1，自己设置即可
     r_password2 = 'asdfqwerzxcvtyuiopghjklbnm'  # 转子2，自己设置即可
     r_password3 = 'poiuytrewqasdfghjklmnbvcxz'  # 转子3，自己设置即可
     if is_str(a_password, r_password1, r_password2, r_password3):
         msg=f'密文/明文如下:{simple_replace(a_password, r_password1, r_password2, r_password3)}'
-        ezgui.textbox(msg,title)
+        eg.textbox(msg,title)
