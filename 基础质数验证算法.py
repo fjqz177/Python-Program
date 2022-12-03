@@ -9,7 +9,6 @@ def lbbl(n):
         i = i + 1
     return True
 
-
 while True:
     if lbbl(n):
         pl.append(n)
