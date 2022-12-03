@@ -11,7 +11,7 @@ def lbbl(n):
 
 
 while True:
-    if lbbl(n) == True:
+    if lbbl(n):
         pl.append(n)
         print(n)
     n = n + 2
