@@ -3,8 +3,7 @@
 import re
 import string
 import easygui as ezgui
- 
- 
+
 def simple_replace(password, replace_word1, replace_word2, replace_word3):  
     count = 0  
     new_pass = ''  
