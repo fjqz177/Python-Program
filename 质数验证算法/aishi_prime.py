@@ -17,4 +17,4 @@ if __name__ == "__main__":
     t2 = time()
     tt = t2 - t1
     print("{}以内素数共{}个:".format(nei,len(pl)))
-    print("共耗时{}秒".format(tt))#0.7
+    print("共耗时{}秒".format(tt))#0.7s

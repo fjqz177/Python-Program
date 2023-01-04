@@ -1,7 +1,7 @@
 from time import time
 
 def sieve(n):
-    prime = [True for i in range(n+1)]
+    prime = [True] * (n + 1)
     p = 2
     while (p * p <= n):
         if (prime[p] == True):
@@ -21,4 +21,4 @@ if __name__=='__main__':
     tt = t2 - t1
     print(n)
     print("{}以内素数共{}个:".format(n,len(pl)))
-    print("共耗时",tt,"秒")#0.12
+    print("共耗时",tt,"秒")#0.10s
