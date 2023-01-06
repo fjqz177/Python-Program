@@ -1,9 +1,10 @@
 from time import time
+from rich.progress import track
 
 def ess(n):
     pl = [2]
     Td = [True] * (n + 1)
-    for i in range(3, n + 1, 2):
+    for i in track(range(3, n + 1, 2)):
         if Td[i]:
             pl.append(i)
             for j in range(i ** 2, n + 1, i * 2):
@@ -12,7 +13,7 @@ def ess(n):
 
 if __name__ == "__main__":
     t1 = time()
-    nei = 10 ** 6
+    nei = int(input("请输入你要计算多少以内的质数个数："))
     pl = ess(nei)
     t2 = time()
     tt = t2 - t1
