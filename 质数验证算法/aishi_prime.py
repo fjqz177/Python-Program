@@ -12,8 +12,8 @@ def ess(n):
     return pl
 
 if __name__ == "__main__":
-    t1 = time()
     nei = int(input("请输入你要计算多少以内的质数个数："))
+    t1 = time()
     pl = ess(nei)
     t2 = time()
     tt = t2 - t1
