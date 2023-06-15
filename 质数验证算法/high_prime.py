@@ -22,4 +22,4 @@ if __name__=='__main__':
     tt = t2 - t1
     print(len(pl))
     print("{}以内素数共{}个:".format(nei,len(pl)))
-    print("共耗时",tt,"秒")#1.7
+    print("共耗时",tt,"秒")#1.7s for 1000000

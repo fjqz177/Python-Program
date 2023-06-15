@@ -12,10 +12,10 @@ def ess(n):
     return pl
 
 if __name__ == "__main__":
-    nei = int(input("请输入你要计算多少以内的质数个数："))
+    nei = 1000000
     t1 = time()
     pl = ess(nei)
     t2 = time()
     tt = t2 - t1
     print("{}以内素数共{}个:".format(nei,len(pl)))
-    print("共耗时{}秒".format(tt))#0.07s
+    print("共耗时{}秒".format(tt))#0.16s for 1000000
