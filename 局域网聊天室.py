@@ -5,12 +5,14 @@ import select
 MAX_CLIENTS = 1000
 SERVER_PORT = 7711
 
+
 # Client class
 class Client:
     def __init__(self, sock, addr):
         self.socket = sock
         self.addr = addr
         self.nick = f"user:{addr[1]}"
+
 
 # Chat class
 class Chat:
@@ -32,7 +34,9 @@ class Chat:
         print(f"Connected client {addr[1]}")
 
     def remove_client(self, client_socket):
-        print(f"Disconnected client {self.clients[client_socket].addr[1]}, nick={self.clients[client_socket].nick}")
+        print(
+            f"Disconnected client {self.clients[client_socket].addr[1]}, nick={self.clients[client_socket].nick}"
+        )
         del self.clients[client_socket]
         self.client_sockets.remove(client_socket)
 
@@ -69,8 +73,9 @@ class Chat:
                                     if sock != ready_socket:
                                         sock.send(msg)
 
-                    except Exception as e:
+                    except Exception:
                         self.remove_client(ready_socket)
+
 
 if __name__ == "__main__":
     chat = Chat()
