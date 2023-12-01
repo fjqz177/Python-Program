@@ -84,7 +84,7 @@ def decrypt(c, selfkey):
 
 def is_str(m):  
     an = re.match('[0-9]+$', m)  
-    if an == None:
+    if an is None:
         print('密码必须是纯数字！')
         return False
     else:
