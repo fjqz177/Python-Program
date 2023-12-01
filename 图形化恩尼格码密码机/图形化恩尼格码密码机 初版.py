@@ -1,7 +1,6 @@
 # 此程序需安装easygui库使用
 
 import re
-import string
 import easygui as eg
 
 def simple_replace(password, replace_word1, replace_word2, replace_word3):  
@@ -35,7 +34,7 @@ def simple_replace(password, replace_word1, replace_word2, replace_word3):
  
 def is_str(password, replace_word1, replace_word2, replace_word3):  
     an = re.match('[a-z]+$', password)  
-    if not type(password) == type(replace_word1) == type(replace_word2) == type(replace_word3) == type('a'):
+    if not isinstance(password, str) and isinstance(replace_word1, str) and isinstance(replace_word2, str) and isinstance(replace_word3, str):
         print('密码必须是字符串！')
         return False
     elif not an:
