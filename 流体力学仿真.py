@@ -8,6 +8,7 @@ import numpy as np
 
 # import matplotlib
 from matplotlib import pyplot
+from tqdm.rich import tqdm
 
 plot_every = 100  # Frequency of plotting the results
 
@@ -43,8 +44,8 @@ for y in range(0, Ny):
             cylinder[y][x] = True
 
 # Main loop
-for it in range(Nt):
-    print(it)  # Print the current timestep
+for it in tqdm(range(Nt)):
+    #print(it)  # Print the current timestep
     F[:, -1, [6, 7, 8]] = F[:, -2, [6, 7, 8]]
     F[:, 0, [2, 3, 4]] = F[:, 1, [2, 3, 4]]
     # Shift the distribution function F in each direction
@@ -94,4 +95,4 @@ for it in range(Nt):
         pyplot.imshow(vel_mag_squared, cmap="bwr")
         pyplot.pause(0.03)  # Pause for a short time to display the plots
         pyplot.cla()
-        print("Successfully!")
+        #print("Successfully!")
